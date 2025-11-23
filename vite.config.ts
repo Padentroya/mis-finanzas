@@ -4,7 +4,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   define: {
-    // This allows the app to access process.env.API_KEY during the build on Vercel
-    'process.env.API_KEY': JSON.stringify(process.env.API_KEY)
+    // Safely expose the API_KEY. If not set during build, defaults to empty string to prevent build crash.
+    // The user must set this in Vercel Environment Variables.
+    'process.env.API_KEY': JSON.stringify(process.env.API_KEY || '')
   }
 });
