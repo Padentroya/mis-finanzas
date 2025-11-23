@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Mis finanzas Pro v1.0",
+  "description": "Una aplicación de gestión financiera personal multiplataforma. Permite seguimiento de ingresos, gastos, presupuestos y ofrece asesoramiento inteligente basado en IA.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
